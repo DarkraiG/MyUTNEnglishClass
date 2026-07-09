@@ -14,7 +14,6 @@
 
 <div class="skip-link"><a href="#main">Saltar al contenido</a></div>
 
-<!-- ============ AUTH GATE (login / registro) — se muestra solo cuando hace falta ============ -->
 <div class="auth-gate" id="auth-gate" hidden>
   <div class="auth-card">
     <button type="button" class="auth-close" id="auth-close" aria-label="Cerrar">✕</button>
@@ -40,7 +39,7 @@
 
     <p class="auth-error" id="auth-error" hidden></p>
     <p class="auth-config-warning" id="auth-config-warning" hidden>
-      ⚠️ Falta terminar de configurar Firebase. Revisa <strong>SETUP.md</strong> (paso 5) y
+      Falta terminar de configurar Firebase. Revisa <strong>SETUP.md</strong> (paso 5) y
       pega tus valores reales en <code>js/firebase-config.js</code>.
     </p>
 
@@ -80,7 +79,6 @@
   </div>
 </div>
 
-<!-- ============ PANEL DE ADMINISTRADOR (profesor) ============ -->
 <div class="admin-shell" id="admin-shell" hidden>
   <header class="admin-header">
     <div class="admin-header-inner">
@@ -101,7 +99,7 @@
       <p class="lead">Consulta el avance de cada estudiante, asígnalo a su grupo y gestiona el acceso a la plataforma.</p>
     </div>
 
-    <div class="admin-stats" id="admin-stats"><!-- generado por JS --></div>
+    <div class="admin-stats" id="admin-stats"></div>
 
     <div class="admin-toolbar">
       <input type="text" id="admin-search" class="modal-input admin-search" placeholder="Buscar por nombre, correo o matrícula…">
@@ -125,7 +123,6 @@
   </main>
 </div>
 
-<!-- ============ MODAL: VER PROGRESO (admin) ============ -->
 <div class="modal-overlay" id="admin-view-modal" hidden>
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="admin-view-title">
     <p class="modal-title" id="admin-view-title">Progreso del estudiante</p>
@@ -136,7 +133,6 @@
   </div>
 </div>
 
-<!-- ============ MODAL: EDITAR ESTUDIANTE (admin) ============ -->
 <div class="modal-overlay" id="admin-edit-modal" hidden>
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="admin-edit-title">
     <p class="modal-title" id="admin-edit-title">Editar estudiante</p>
@@ -155,7 +151,6 @@
   </div>
 </div>
 
-<!-- HEADER -->
 <header class="site-header" id="app-header">
   <div class="header-inner">
     <a class="logo" href="#inicio" data-nav="inicio">
@@ -203,7 +198,6 @@
 
 <main id="main">
 
-  <!-- ============ HERO / BOARDING PASS ============ -->
   <section class="view" id="view-inicio" data-view="inicio">
     <div class="hero">
       <div class="hero-copy">
@@ -269,7 +263,6 @@
     </div>
   </section>
 
-  <!-- ============ NIVELES ============ -->
   <section class="view" id="view-niveles" data-view="niveles" hidden>
     <div class="section-head">
       <p class="eyebrow">Mapa de vuelo</p>
@@ -288,7 +281,7 @@
       <p class="lead" id="leccion-desc">Escucha el audio, sigue la transcripción y resuelve el quiz para sellar tu avance.</p>
     </div>
 
-    <div class="lesson-tabs" id="lesson-tabs"><!-- generado por JS --></div>
+    <div class="lesson-tabs" id="lesson-tabs"></div>
 
     <div class="lesson-layout">
       <div class="player-card">
@@ -322,7 +315,7 @@
 
       <div class="quiz-card">
         <p class="quiz-heading">Comprueba lo aprendido</p>
-        <div id="quiz-body"><!-- generado por JS --></div>
+        <div id="quiz-body"></div>
         <div class="quiz-result" id="quiz-result" hidden>
           <p id="quiz-score-text"></p>
           <button class="btn btn-primary" id="quiz-next-btn">Sellar avance y continuar</button>
@@ -330,8 +323,7 @@
       </div>
     </div>
   </section>
-
-  <!-- ============ HABILIDADES ============ -->
+  
   <section class="view" id="view-habilidades" data-view="habilidades" hidden>
     <div class="section-head">
       <p class="eyebrow">Zona de práctica · Nivel <span id="skills-level-label">A1</span></p>
@@ -354,19 +346,17 @@
           <span class="skills-stat-label">XP total</span>
         </div>
       </div>
-      <div class="skills-level-switch" id="skills-level-switch"><!-- generado por JS --></div>
+      <div class="skills-level-switch" id="skills-level-switch"></div>
     </div>
 
-    <div class="skill-grid" id="skill-grid"><!-- generado por JS --></div>
+    <div class="skill-grid" id="skill-grid"></div>
 
-    <!-- ============ PANEL DE EJERCICIO (se llena dinámicamente) ============ -->
     <div class="skill-panel" id="skill-panel" hidden>
       <button type="button" class="skill-back" id="skill-back">← Volver a habilidades</button>
-      <div class="skill-panel-inner" id="skill-panel-inner"><!-- generado por JS --></div>
+      <div class="skill-panel-inner" id="skill-panel-inner"></div>
     </div>
   </section>
 
-  <!-- ============ PROGRESO ============ -->
   <section class="view" id="view-progreso" data-view="progreso" hidden>
     <div class="section-head">
       <p class="eyebrow">Pasaporte de aprendizaje</p>
@@ -389,7 +379,7 @@
       </div>
     </div>
 
-    <div class="passport" id="passport-stamps"><!-- generado por JS --></div>
+    <div class="passport" id="passport-stamps"></div>
 
     <div class="certificate-card" id="certificate-card">
       <div class="certificate-info">
@@ -401,11 +391,10 @@
 
     <div class="deliverables">
       <p class="quiz-heading">Entregables del servicio social</p>
-      <ul class="deliverables-list" id="deliverables-list"><!-- generado por JS --></ul>
+      <ul class="deliverables-list" id="deliverables-list"></ul>
     </div>
   </section>
 
-  <!-- ============ MATERIAL DE APOYO ============ -->
   <section class="view" id="view-material" data-view="material" hidden>
     <div class="section-head">
       <p class="eyebrow">Recursos de gramática</p>
@@ -457,14 +446,13 @@
   <p>MyUTNEnglishClass — Proyecto de servicio social, programa Educación, arte, cultura y deporte. <strong>Universidad Tecnológica de Nezahualcóyotl</strong> · Excelencia académica, Estado de México.</p>
 </footer>
 
-<!-- ============ MODAL: PERFIL ============ -->
 <div class="modal-overlay" id="profile-modal" hidden>
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="profile-modal-title">
     <p class="modal-title" id="profile-modal-title">Tu perfil</p>
     <label class="modal-label" for="profile-name-input">Nombre</label>
     <input type="text" id="profile-name-input" class="modal-input" maxlength="28" placeholder="Tu nombre">
     <p class="modal-label">Avatar</p>
-    <div class="avatar-grid" id="avatar-grid"><!-- generado por JS --></div>
+    <div class="avatar-grid" id="avatar-grid"></div>
     <div class="modal-actions">
       <button class="btn btn-ghost-light" id="profile-cancel">Cancelar</button>
       <button class="btn btn-primary" id="profile-save">Guardar</button>
@@ -472,7 +460,6 @@
   </div>
 </div>
 
-<!-- ============ MODAL: FELICITACIÓN ============ -->
 <div class="modal-overlay" id="congrats-modal" hidden>
   <div class="modal-card congrats-card" role="dialog" aria-modal="true" aria-labelledby="congrats-title">
     <div class="confetti" aria-hidden="true"></div>
@@ -495,6 +482,5 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script src="js/firebase-config.js"></script>
 <script src="js/auth.js"></script>
-<!-- js/app.js se carga dinámicamente desde auth.js después de iniciar sesión como estudiante -->
 </body>
 </html>
